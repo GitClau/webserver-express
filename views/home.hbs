@@ -1,0 +1,25 @@
+<!--se le corta el head como se cortó el nav y se pone entre barras con el nombre de la carpeta que lo contiene-->
+<!--si está usando el comando nodemon es preferible usar este comando "nodemon server -e js,hbs,html,css" así se pueden detectar todos los cambios en los archivos ya que hay veces que solo con usar nodemon no sirve para detectar los cambios en archivos hbs css html u otros varios, se deben citar todas las extensiones que sepamos que se usan-->
+
+{{> head }}
+
+
+
+    <!-- le hemos quitado todo el contenido de la etiqueta navbar y lo hemos pegado en navbar.hbs se puede usar cualquier navbar. ahora no tenemos barra de navegacion parqa que la haya tenemos que poner lo que viene abajo-->
+    {{> navbar }}
+    <!--se usa el mismo nombre que el de la carpeta de la barra de navegación dentro de partials-->
+
+    <!--hacemos un jumbotron buscando un jumbotron en bootstrap y copiando y pegando el código-->
+    <div class="jumbotron">
+        {{!-- <h1 class="display-4">Soy {{ nombre}}</h1> se descomenta si no se usan helpers --}}
+        {{!-- <h1 class="display-4">Soy {{ capitalizar 'claUdio suCIu'}}</h1> si se quiere usar la variable para la funcion capitalizar se puede poner despues tal y como viene abajo y pondrá la primera letra en mayusculas y el resto en minusculas sin importar como venga la variable texto desde base de datos o desde cualquier otro sitio --}}
+        <h1 class="display-4">Soy {{ capitalizar nombre}}</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+    <!--esto es la parte del archio de estilos dentro de la web está relacionado con la carpeta style.css dentro de public/assets/css-->
+
+<!--se corta el footer también hasta el final y se usa la misma nomenclatura-->
+{{> footer }}

@@ -1,0 +1,12 @@
+/*le creamos un pie de pagina dentro de la pagina wev además ira marcado con un colo igual al de la barra de navegación*/
+
+footer {
+    background-color: #343a40;
+    /*para copiar el color usar mozilla y desde el inspector de pagína pincha la pipeta o marcador que permite coger colores*/
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    padding: 20px;
+}
